@@ -1,0 +1,13 @@
+
+public class MensagemJava {
+
+	public static void main(String[] args) {
+		// Escrever um comentário
+		String nome="Ricardo";
+		int idade=23; 
+		
+		System.out.println("O nome do usuário é: "+ nome + " e ele tem "+idade+"anos");
+		System.out.println("Vamos fazer um super desenvolvimento");
+	}
+
+}

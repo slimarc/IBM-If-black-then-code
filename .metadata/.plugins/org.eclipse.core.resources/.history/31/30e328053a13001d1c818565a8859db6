@@ -1,0 +1,13 @@
+
+public class ProcessaTabuada {
+	
+	public static void main(String[] args) {
+		// criando um laço de repetição
+		for(int contador=0; contador<=10; contador++) {
+			Scanner teclado = new Scanner(System.in); int valor = teclado.nextInt();
+			System.out.println(valor+" * "+contador+" = "+(valor*contador));
+		}
+		
+	}
+
+}

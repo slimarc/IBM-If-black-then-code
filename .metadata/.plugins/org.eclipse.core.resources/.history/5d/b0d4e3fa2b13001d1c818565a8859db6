@@ -1,0 +1,11 @@
+
+public class MensagemJava {
+
+	public static void main(String[] args) {
+		// Escrever um comentário
+		
+		System.out.println("Bem vindo ao mundo de desenvolvimento java");
+
+	}
+
+}

@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ProcessaCalculos {
+
+	public static void main(String[] args) {
+		System.out.println("Entre com o primeiro valor:");
+		Scanner teclado= new Scanner(System.in); int valor1 = teclado.nextInt(); 
+		Scanner teclado= new Scanner(System.in); int valor2 = teclado.nextInt();
+		System.out.println("Os valores digitados foram: "+valor1+" e "+valor2);
+		System.out.println("A soma dos valores foi de: " + (valor1+valor2));
+				
+	}
+
+}

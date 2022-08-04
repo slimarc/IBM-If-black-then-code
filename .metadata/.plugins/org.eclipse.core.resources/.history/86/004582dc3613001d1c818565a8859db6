@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class ProcessaCalculos {
+
+	public static void main(String[] args) {
+		System.out.println("Entre com o valor desejado");
+		Scanner teclado= new Scanner(System.in); int valor = teclado.nextInt();
+		System.out.println("O valor digitado foi: "+valor);
+				
+	}
+
+}
