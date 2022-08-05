@@ -2,5 +2,9 @@ INDEX VERSION 1.131+C:\Users\zlkad\OneDrive\Área de Trabalho\workspace\.metadata
 4115385524.index
 1865797976.index
 1650449417.index
+470491116.index
+3546719776.index
 1890033849.index
 3287800556.index
+2518868878.index
+3422745177.index
