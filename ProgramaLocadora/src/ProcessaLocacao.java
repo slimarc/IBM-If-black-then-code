@@ -40,7 +40,7 @@ import java.util.Scanner;
 								System.out.println("Insira uma opção válida.");
 								break;
 							}
-						case 3:
+						default:
 							System.out.println("Nunca é um adeus...");
 							break;
 					}
