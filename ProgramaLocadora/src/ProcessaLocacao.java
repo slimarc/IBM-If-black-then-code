@@ -20,36 +20,34 @@ import java.util.Scanner;
 			System.out.println("\n3 - Encerre o progama.");
 			opcao = input.nextInt();
 			
-			if(opcao>=1 && opcao<=3){
-				switch (opcao) {
-						case 1:
-							//For para imprimir os carros cadastrados
-							System.out.println("Os disponivéis são: ");
-							for(int pos=0; pos<=9; pos++) {
-								System.out.println(ordem[pos]+" - "+ carros[pos]);
+			switch (opcao) {
+					case 1:
+						//For para imprimir os carros cadastrados
+						System.out.println("Os disponivéis são: ");
+						for(int pos=0; pos<=9; pos++) {
+							System.out.println(ordem[pos]+" - "+ carros[pos]);
+						}
+					case 2:
+						int carro;
+						System.out.println("Digite a opção corresponde ao carro que você deseja: ");
+						carro = input.nextInt();
+						if (carro>=1 && carro<=10){
+							for(int pos=0; pos<=carro; pos++) {
 							}
-						case 2:
-							int carro;
-							System.out.println("Digite a opção corresponde ao carro que você deseja: ");
-							carro = input.nextInt();
-							if (carro>=1 && carro<=10){
-								for(int pos=0; pos<=carro; pos++) {
-								}
-								System.out.println("O carro selecionado foi o: " + carros[carro-1]);
-							}else {
-								System.out.println("Insira uma opção válida.");
-								break;
-							}
-						default:
-							System.out.println("Nunca é um adeus...");
+							System.out.println("O carro selecionado foi o: " + carros[carro-1]);
+						}else{
+							System.out.println("Insira uma opção válida.");
 							break;
+						}
+					case 3:
+						System.out.println("Programa encerrado, até logo.");
+						break;
+					default:
+						System.out.println("Insira uma opção válida");
+						break;
 					}
-			}else{
-				System.out.println("Insira uma opção válida");
-				System.out.println("Nunca é um adeus...");
 			
 			input.close();
-			}
 		}
 	}
 	
