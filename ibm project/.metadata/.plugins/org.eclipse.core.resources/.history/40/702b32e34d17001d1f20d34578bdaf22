@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class ControleFrutas {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		ArrayList<String> nomeFrutas = new ArrayList<String>();
+		int opcao;
+		
+		System.out.println("----MENU----");
+		System.out.println("1 - Cadastrar frutas");
+		System.out.println("2 - Listar frutas");
+		System.out.println("3 - Excluir frutas");
+		System.out.println("4 - Listar frutas com id");
+		System.out.println("3 - Modificar uma fruta");
+		opcao = teclado.nextInt();
+		
+		switch(opcao){
+					case 1:
+						System.out.println("Quantas frutas serão cadastradas? ");
+						int qtdFrutas = teclado.nextInt();
+						for (int i=0; i<=qtdFrutas; i++) {
+							String fruta = teclado.nextLine();
+							nomeFrutas.add(fruta);
+						}
+							
+					case 2:
+						System.out.println("----FRUTAS CADASTRADAS----");
+						for(int contador=0; contador<nomeFrutas.size(); contador++) {
+							System.out.println(nomeFrutas.get(contador));
+						}
+					case 3:
+						int fruta;
+						System.out.println("Qual fruta você deseja remover? Digite o id");
+						fruta = teclado.nextInt();
+						nomeFrutas.remove(fruta);
+						System.out.println("Foi removida foi: "+nomeFrutas.get(fruta));
+					case 4:
+						System.out.println(nomeFrutas);
+					case 5:
+						String nome;
+						System.out.println("Qual fruta você deseja modificar?");
+						fruta = teclado.nextInt();
+						nomeFrutas.remove(fruta);
+						System.out.println("Insira o nome da nova fruta");
+						nome = teclado.nextLine();
+						nomeFrutas.set(fruta, nome);
+		}	
+		
+		
+		teclado.close();
+	}
+
+}

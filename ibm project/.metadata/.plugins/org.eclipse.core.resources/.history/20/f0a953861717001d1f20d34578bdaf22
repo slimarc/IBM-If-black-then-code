@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class OperacaoBancoDados {
+	public static void main(String[] args) {
+		
+	// criando um procedimento de inserção de registros com ArrayLista
+	ArrayList<String> nomeClientes = new ArrayList<String>();
+	nomeClientes.add("Petrolina");
+	nomeClientes.add("Givanildo");
+	nomeClientes.add("Adroaldo");
+	nomeClientes.add("Tarciano");
+	
+	//Visualizando os registros alocado na variavel
+	System.out.println(nomeClientes);
+	
+	//Visualizando um registro específico dentro da base
+	System.out.println(nomeClientes.get(1));
+	}
+
+}

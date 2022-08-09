@@ -1,0 +1,28 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class GeraArquivo {
+
+	public static void main(String[] args) throws IOException {
+		ArrayList<String> nomeClientes = new ArrayList<String>();
+		nomeClientes.add("Petrolina");
+		nomeClientes.add("Givanildo");
+		nomeClientes.add("Adroaldo");
+		nomeClientes.add("Tarciano");
+		
+		FileWriter arquivo = new FileWriter("c:\\desktop\\clientes.txt");
+		PrintWriter gravarArquivo = new PrintWriter(arquivo);
+		
+		for(String contador: nomeClientes) {
+			gravarArquivo.println(nomeClientes);
+		}
+		
+		
+		arquivo.close();
+		System.out.println("Criação de arquivo na unidade c:\\desktop\\clientes.txt");
+
+	}
+
+}

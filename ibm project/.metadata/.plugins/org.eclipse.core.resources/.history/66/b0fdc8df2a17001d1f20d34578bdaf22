@@ -1,0 +1,9 @@
+import java.util.HashMap;
+
+public class CamposRegistro {
+	public static void main(String[] args) {
+		HashMap<String, String> nomeEmail = new HashMap<String, String>();
+		nomeEmail.put("Ricardo", "sricardolimaa@gmail.com");
+		System.out.println(nomeEmail);
+	}
+}

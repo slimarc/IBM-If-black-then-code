@@ -18,6 +18,12 @@ public class Produto {
 	void aplicarDesconto(double percentual){//parametro
 		preco = preco - (preco * percentual) /100; 
 	}
+	
+	double simularDesconto(double percentual){
+		double precoSimulado;
+		precoSimulado = preco - preco * percentual/100;
+		return precoSimulado;
+	}
 }
 
 //VARIÁVEIS = ATRIBUTOS

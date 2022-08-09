@@ -26,13 +26,15 @@ public class Loja {
 		System.out.println("***************************");
 		p.aplicarDesconto(10);
 		p.mostrarAnuncio();
-		p2.aplicarDesconto(20);
+		p2.modificarPreco(20);
 		p3.aplicarDesconto(10);
 		
 		p2.mostrarAnuncio();
 		p3.mostrarAnuncio();
 		
-		
+		double precoP = p.simularDesconto(15);
+		System.out.println("O preco do"+p.descricao+"com mais 15% de desconto fica R$ "+precoP);
+		p.mostrarAnuncio();
 	}
 
 }

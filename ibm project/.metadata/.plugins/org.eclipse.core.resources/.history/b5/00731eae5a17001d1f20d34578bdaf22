@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ControleFrutas {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		ArrayList<String> nomeFrutas = new ArrayList<String>();
+		int opcao;
+		
+		System.out.println("----MENU----");
+		System.out.println("1 - Cadastrar frutas");
+		System.out.println("2 - Listar frutas");
+		System.out.println("3 - Excluir frutas");
+		System.out.println("4 - Listar frutas com id");
+		System.out.println("3 - Modificar uma fruta");
+		opcao = teclado.nextInt();
+		
+		switch(opcao){
+					case 1:
+						System.out.println("Quantas frutas serão cadastradas? ");
+						int qtdFrutas = teclado.nextInt();
+						for (int i=0; i<=qtdFrutas; i++) {
+							String fruta = teclado.nextLine();
+							nomeFrutas.add(fruta);
+						}
+					case 2:
+						nomeFrutas.remove(0);
+						System.out.println("----FRUTAS CADASTRADAS----");
+						for(int contador=0; contador<nomeFrutas.size(); contador++) {
+							System.out.println(nomeFrutas.get(contador));
+						}
+					case 3:
+						int fruta;
+						System.out.println("Qual fruta você deseja remover? Digite o id");
+						fruta = teclado.nextInt();
+						System.out.println("A fruta removida foi: "+nomeFrutas.get(fruta));
+						nomeFrutas.remove(fruta);
+						System.out.println("----LISTA DE FRUTAS ATUALIZADA----");
+						for(int contador=0; contador<nomeFrutas.size(); contador++) {
+							System.out.println(nomeFrutas.get(contador));
+						};
+					case 4:
+						System.out.println("----LISTA DE FRUTAS COM ID----");
+						for(int contador=0; contador<nomeFrutas.size(); contador++) {
+							System.out.print("ID "+ contador+ " ");
+							System.out.println(nomeFrutas.get(contador));
+						};
+					case 5:
+						System.out.println("Qual fruta você deseja modificar?");
+						fruta = teclado.nextInt();
+						System.out.println("A fruta a ser modificada é: "+nomeFrutas.get(fruta));
+						nomeFrutas.remove(fruta);
+						for (int i=0; i==fruta; i++) {
+							String nomeNovaFruta = teclado.nextLine();
+							nomeFrutas.add(nomeNovaFruta);
+						}
+						System.out.println("-------SUA CESTA DE FRUTA--------");
+						for(int contador=0; contador<nomeFrutas.size(); contador++) {
+							System.out.println(nomeFrutas.get(contador));
+						};
+		
+		}	
+		
+		
+		teclado.close();
+	}
+
+}
