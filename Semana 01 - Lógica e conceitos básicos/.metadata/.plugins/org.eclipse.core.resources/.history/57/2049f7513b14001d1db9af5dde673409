@@ -1,0 +1,13 @@
+/* Exercicio 02
+ * Para calcular:
+ * A) Área de um quadrado, dados seus lados
+ * B) Área de um retangulo, dados suas base e sua altura
+ * C) Área de um triângulo, dados sua base e sua altura
+ * D) Área de um losango, dadas suas diagonais
+ * E) Área de um trapézio dadas suas bases e sua altura
+ * F) Volume de um paralelepípedo, dada duas dimensões
+ * 
+*/
+public class Questao2LetraD {
+
+}

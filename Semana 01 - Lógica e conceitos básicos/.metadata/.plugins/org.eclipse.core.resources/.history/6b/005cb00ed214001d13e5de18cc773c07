@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+	public class EscolhendoCarros {
+		public static void main(String[] args) {
+			Scanner input = new Scanner(System.in);
+			String[] carros = new String[10];
+			String [] ordem = {"1", "2","3","4", "5", "6", "7", "8", "9", "10"};
+
+			System.out.println("Insira os dez carros: ");
+			for(int pos=0; pos<=9; pos++) {
+				carros[pos] = input.nextLine();
+				System.out.println("Os carros inseridos foram: "+ ordem[pos] + carros[pos]);
+			}
+			
+			
+			input.close();
+		}
+	}
+	
+

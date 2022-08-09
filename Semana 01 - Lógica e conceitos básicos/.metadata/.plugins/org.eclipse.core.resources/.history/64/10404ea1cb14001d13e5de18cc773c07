@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+	public class ControleRegistros {
+		public static void main(String args[]){
+			Scanner input = new Scanner(System.in);
+			String [] carros = {"Uno", "Hb20","Gol","Ka"};
+			
+			System.out.println(carros[]);
+			
+			input.close();	
+			
+		}
+}

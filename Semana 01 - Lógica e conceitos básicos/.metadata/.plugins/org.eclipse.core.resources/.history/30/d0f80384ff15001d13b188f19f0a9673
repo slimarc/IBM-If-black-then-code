@@ -1,0 +1,6 @@
+import java.util.Scanner;
+	public class ExercicioQuadradoECubo{
+		public static void main(String args[]){
+			
+		}
+	}

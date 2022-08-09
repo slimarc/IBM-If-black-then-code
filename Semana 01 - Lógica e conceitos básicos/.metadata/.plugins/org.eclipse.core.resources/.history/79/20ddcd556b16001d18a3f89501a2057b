@@ -1,0 +1,26 @@
+
+public class Loja {
+	public static void main(String[] args) {
+		Produto p, p2, p3;	
+		p = new Produto();
+		p2 = new Produto();
+		p3 = new Produto();
+		
+		p.codigo = 527894;
+		p.descricao = "Computador";
+		p.preco = 2500.00;
+		
+		p2.codigo = 121354;
+		p2.descricao = "Mouse";
+		p2.preco = 30.0;
+		
+		p3.codigo = 234234;
+		p3.descricao = "Teclado";
+		p3.preco = 40.0;
+		
+		p.mostrarAnuncio(); 
+		p2.mostrarAnuncio();
+		p3.mostrarAnuncio();
+	}
+
+}

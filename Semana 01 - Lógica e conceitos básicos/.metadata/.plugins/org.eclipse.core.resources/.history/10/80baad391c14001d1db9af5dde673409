@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class LeiturasDiversas2{
+	public static void main(String args[]){
+		Scanner input = new Scanner(System.in);
+		int codigo;
+		double preco;
+		String nome;
+		
+		System.out.print("Digite o codigo do produto: ");
+		codigo = input.nextInt();
+		System.out.print("Digite o preço do produto: ");
+		preco = input.nextDouble();
+		System.out.print("Digite o nome do produto: ");
+		nome = input.nextLine();
+		
+		System.out.println("O produto inserido foi "+nome+" de código "+ codigo+" no valor de "+preco);
+		input.close();
+	}
+}

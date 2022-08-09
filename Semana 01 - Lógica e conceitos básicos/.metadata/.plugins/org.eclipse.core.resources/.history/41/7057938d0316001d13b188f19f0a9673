@@ -1,0 +1,35 @@
+import java.util.Scanner;
+	public class Quadrante{
+		public static void main(String args[]) {
+			Scanner teclado = new Scanner(System.in);
+			double x, y;
+			int pontos;
+			
+			pontos=1; 
+			while (pontos!=0) {
+				System.out.println("Insira x: ");
+				x = teclado.nextDouble();
+				System.out.println("Insira y: ");
+				y = teclado.nextDouble();
+				
+				if (x>0 && y>0) {
+					System.out.println("Primeiro quadrante");
+				}
+				else if (x<0 && y>0) {
+					System.out.println("Segundo quadrante");
+				}
+				else if (x<0 && y<0) {
+					System.out.println("Terceiro quadrante");
+				}
+				else if (x>0 && y<0){
+					System.out.println("Quarto quadrante");
+				}
+				else {
+					System.out.println(x+", "+y);
+					break;
+				}
+			
+			}
+			teclado.close();
+		}
+	}

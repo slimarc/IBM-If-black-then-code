@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class LeiturasDiversas{
+	public static void main(String args[]){
+		Scanner input = new Scanner(System.in);
+		String nome;
+		System.out.println("Insira seu nome: ");
+		nome = input.nextLine();
+		System.out.println("O nome inserido foi: "+nome);
+		input.close();
+		
+	}
+}
