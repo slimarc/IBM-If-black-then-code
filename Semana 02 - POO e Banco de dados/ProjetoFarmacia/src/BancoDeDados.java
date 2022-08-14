@@ -1,16 +1,17 @@
 
+
 public class BancoDeDados {
 
 	public static void main(String[] args) {
-		Sistema sintaxeBanco = new Sistema();
-		sintaxeBanco.conectar();
+		Sistema executar = new Sistema();
+		executar.conectar();
 		
-		if(sintaxeBanco.estaConectado()) {
+		if(executar.estaConectado()) {
 			//permite chamar a opção read do CRUD
-			sintaxeBanco.listaClientes();
+			//executar.listaClientes();
 			
 			//Permite chamar a opção Insert do CRUD
-			//sintaxeBanco.inserirContatos("Samira Pereira");
+			//executar.inserirClientes("Ricardo Lima","047.869.155-77","71 98299-4249","ricardo@gmail.com");
 			
 			//Chamando opção upadate do CRUD
 			//sintaxeBanco.updateContato("32", "Samira Pereira");

@@ -62,14 +62,12 @@ public class Sistema {
 			String cidade = resultset.getString("cidade");
 			String estado = resultset.getString("estado");
 		
-			
-			System.out.println("****************************************");
 			System.out.println("************DADOS*************");
 			System.out.println("Código do cliente: "+ id);
 			System.out.println("Nome: "+ nome);
 			System.out.println("Cpf: "+ cpf);
 			System.out.println("Telefone: "+ tel);
-			System.out.println("************ENDEREÇO*************");
+			System.out.println("***********ENDEREÇO***********");
 			System.out.println("Rua: "+rua);
 			System.out.println("Bairro: "+bairro);
 			System.out.println("Cidade: "+cidade);
@@ -82,22 +80,29 @@ public class Sistema {
 	}
 	
 	//Criando o método de inserção de Registros
-	public void inserirClientes(String clientes) {
+	
+	public void inserirClientes(String nomeCliente, String cpfCliente, String telCliente, String emailCliente) {
+		//Linha de execução da sintaxe de insert em SQL
 		try {
-			//Linha de execução da sintaxe de insert em SQL
-			String query="Insert into contatos (contatos) value ('"+clientes+"');";
-			System.out.println(query);
-			this.statement.executeUpdate(query);
+			if(nomeCliente.trim().equals("") || cpfCliente.trim().equals("") || telCliente.trim().equals("") ||emailCliente.trim().equals("") ){
+				System.out.println("Cliente não cadastrado");
+			}else {
+				String query="Insert into clientes (nomeCliente, cpfCliente, telCliente, emailCliente) values ('"+nomeCliente+"','"+cpfCliente+"','"+telCliente+"','"+emailCliente+"');";
+				System.out.println(query);
+				this.statement.executeUpdate(query);
+			}		
 		}catch(Exception e){
 			System.out.println("Error: "+e.getMessage());
 			
-		}
+		} 
 	}
 	
-	public void updateContato(String id, String contatos) {
+	
+	/*
+	public void updateClientes(String id, String contatos) {
 		try {
 			//linha de execução da sintaxe de update em SQL
-			String query="update contatos set contatos=('"+contatos+"') where id=('"+id+"');";
+			String query="update contatos set clientes=('"+clientes+"') where id=('"+id+"');";
 			System.out.println(query);
 			this.statement.executeUpdate(query);
 		}catch(Exception e) {
@@ -116,6 +121,6 @@ public class Sistema {
 			System.out.println("Error: "+e.getMessage());
 		}
 	}
-			
+		*/	
 
 }
