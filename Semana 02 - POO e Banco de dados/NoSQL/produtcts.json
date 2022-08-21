@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "630161bb4bafab7170e7f96c"
+  },
+  "name": "Java: como programar",
+  "author": "Deitel",
+  "type": "BOOK",
+  "year": 2016,
+  "tags": [
+    ""
+  ]
+},{
+  "_id": {
+    "$oid": "6301638f4bafab7170e7f96d"
+  },
+  "author": "Hans Christian Anderson",
+  "name": "A RAINHA DA NEVE",
+  "type": "BOOK",
+  "tags": [
+    ""
+  ]
+}]
