@@ -1,0 +1,61 @@
+CRUDE NO NOSQL
+
+db.products.insert ({"name": "A ARCA DE NOÉ", "author": "Vinicius de Moaraes", "type": "BOOK"})
+
+no caso products é o nome da tabela
+
+a vantagem é que não precisa ter as colunas sendo criadas antes como é no mysql
+
+Operações de consultas no mongodb
+
+cria-se uma representação onde passa o parametro e o valor especifico
+ex:
+
+(type:"BOOK")
+
+na linha de comando:
+
+db.products.find() -> mostra todos os objetos
+db.products.find.pretty() -> mostra todos objetos de forma estruturada
+
+aplicando filtros na linha de comando:
+
+db.products.find({type:"BOOK"}) -> mostra todos objetos do tipo book
+
+
+update na linha de comando:
+
+db.products.update({_id:ObjectId("aqui se poe o id")}, {$set: {"year": 1984}}) -> vai inserir o atributo year 
+
+Geração de documento:
+
+valor, lista de valores -> arrays
+
+db.products.update({_id:ObjectId("aqui se poe o id")}, {$set: {"tags":['drama', 'suspense']}})
+
+no caso dama entra como posição 0 e suspense posição 1
+
+gt (greater than) maior que
+gte (greater than or equals) maior ou igual a 
+lt (less than) menor que
+lte (less than or equals) menor ou igual a 
+
+(year:{$gte: 2000})
+
+{tags: {$all: ['drama', 'suspense']}} -> puxa todos registros que possuem esses parametros
+
+a nivel de comando ficaria:
+
+db.products.find({tags: {$all: ['drama', 'suspense']}}).pretty()
+db.products.find({tags: {$in: ['suspense']}}).pretty() -> puxaria todos registros que contenha pelo menos uma ocorrencia com o valor suspense
+
+Interação de uma mesma aplicação adotando inumeros tipos de banco de dados
+
+Persistencia poliglota refere-se ao uso de diversos sgbd
+
+
+
+
+
+
+

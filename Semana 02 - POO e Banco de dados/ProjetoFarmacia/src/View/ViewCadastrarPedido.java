@@ -25,6 +25,8 @@ public class ViewCadastrarPedido extends JPanel {
 	private JTextField campo_descricao;
 	private JTextField campo_precoCadastro;
 	private JTextField campo_estoque;
+	private JTextField campo_flagRemedio;
+	private JTextField campo_flagGenerico;
 
 	/**
 	 * Create the panel.
@@ -265,7 +267,7 @@ public class ViewCadastrarPedido extends JPanel {
 		
 		JLabel lblNewLabel_13 = new JLabel(">>CADASTRAR PEDIDO<<");
 		lblNewLabel_13.setFont(new Font("Artifakt Element Black", Font.PLAIN, 17));
-		lblNewLabel_13.setBounds(162, 156, 260, 43);
+		lblNewLabel_13.setBounds(165, 175, 260, 43);
 		lblNewLabel_13.setForeground(new Color(32, 92, 109));
 
 		add(lblNewLabel_13);
@@ -322,15 +324,14 @@ public class ViewCadastrarPedido extends JPanel {
 		campo_nomeProd_1_2_1.setBounds(170, 115, 116, 14);
 		add(campo_nomeProd_1_2_1);
 		
-		JCheckBox check_Generico = new JCheckBox("Genérico");
-		check_Generico.setBounds(328, 132, 97, 23);
-		add(check_Generico);
-		
-		JCheckBox check_remedio = new JCheckBox("Remédio");
-		check_remedio.setBounds(328, 106, 97, 23);
-		add(check_remedio);
 		
 		JPanel btn_inserirProduto = new JPanel();
+		btn_inserirProduto.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				executar.postProduto(campo_nomeProduto.getText(), campo_descricao.getText(), campo_precoCadastro.getText(), campo_estoque.getText(), campo_flagRemedio.getText(), campo_flagGenerico.getText());
+			}
+		});
 		btn_inserirProduto.setBackground(new Color(32, 92, 109));
 		btn_inserirProduto.setBounds(433, 131, 92, 25);
 		add(btn_inserirProduto);
@@ -340,6 +341,45 @@ public class ViewCadastrarPedido extends JPanel {
 		lblNewLabel_12_1.setFont(new Font("Dialog", Font.PLAIN, 10));
 		lblNewLabel_12_1.setBackground(Color.WHITE);
 		btn_inserirProduto.add(lblNewLabel_12_1);
+		
+		JCheckBox check_Generico = new JCheckBox("Genérico");
+		check_Generico.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(check_Generico.isSelected()) {
+					campo_flagGenerico.setText("s");
+				}else {
+					campo_flagGenerico.setText("n");
+				}			
+			}
+		});
+		check_Generico.setBounds(328, 132, 97, 23);
+		add(check_Generico);
+		
+		campo_flagGenerico = new JTextField();
+		campo_flagGenerico.setColumns(10);
+		campo_flagGenerico.setBounds(333, 140, 10, 9);
+		add(campo_flagGenerico);
+		
+		JCheckBox check_remedio = new JCheckBox("Remédio");
+		check_remedio.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(check_remedio.isSelected()) {
+					campo_flagRemedio.setText("s");
+				}else {
+					campo_flagRemedio.setText("n");
+				}
+			}
+		});
+		check_remedio.setBounds(328, 106, 97, 23);
+		add(check_remedio);
+		
+		campo_flagRemedio = new JTextField();
+		campo_flagRemedio.setBounds(333, 113, 10, 9);
+		add(campo_flagRemedio);
+		campo_flagRemedio.setColumns(10);
+		
 
 	}
 }

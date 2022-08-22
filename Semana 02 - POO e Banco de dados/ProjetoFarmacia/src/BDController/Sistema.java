@@ -479,4 +479,15 @@ public class Sistema {
 	
 	}
 
+	public void postProduto(String nome, String descricao, String preco, String estoque, String flagRemedio, String flagGenerico) {
+		try {
+			double preco2 = Double.parseDouble(preco);
+			int estoque2 = Integer.parseInt(estoque);
+			String query="Insert into produto (codProduto, nome, descricao, preco, estoque, flagRemedio, flagGenerico) values (null, '"+nome+"','"+descricao+"','"+preco2+"','"+estoque2+"','"+flagRemedio+"', '"+flagGenerico+"');";
+			System.out.println(query);
+			this.statement.executeUpdate(query);
+		}catch(Exception e){
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
 }
