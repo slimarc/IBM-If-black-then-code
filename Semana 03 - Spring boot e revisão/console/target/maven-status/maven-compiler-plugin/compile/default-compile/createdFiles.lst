@@ -1,0 +1,4 @@
+com\br\ricardo\console\models\Pedido.class
+com\br\ricardo\console\LogicaApplication.class
+com\br\ricardo\console\models\Produto.class
+com\br\ricardo\console\models\Cliente.class
