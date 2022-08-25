@@ -1,9 +1,0 @@
-
-//definir novo tipo de dado que será usado por outras classes
-public class Produto {
-	//declarando as variavéis que compõe a estrutura
-	int codigo;
-	String descricao;
-	double preco; 
-
-}
