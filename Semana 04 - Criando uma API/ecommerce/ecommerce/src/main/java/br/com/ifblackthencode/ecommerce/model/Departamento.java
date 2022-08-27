@@ -1,12 +1,17 @@
 package br.com.ifblackthencode.ecommerce.model;
 
-import javax.persistence.Column;
+import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity // indica qeu a classe é armazenavel no banco
 @Table(name="departamento") //nome da tabela
@@ -21,6 +26,10 @@ public class Departamento {
 	
 	@Column(name="descricao", nullable = true, columnDefinition = "TEXT")
 	private String descricao;
+	
+	@OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("departamento")
+	private List<Produto> listaProdutos;
 	
 	public Integer getCodigo() {
 		return codigo;
@@ -40,4 +49,12 @@ public class Departamento {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	public List<Produto> getListProdutos() {
+		return listaProdutos;
+	}
+	public void setListProdutos(List<Produto> listaProdutos) {
+		this.listaProdutos = listaProdutos;
+	}
+	
+
 }
